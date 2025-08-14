@@ -10,11 +10,11 @@ export const usersSlice = createSlice({
   name: "users",
   initialState,
   reducers: {
-    setUser: (
-      state,
-      action: PayloadAction<{ key: keyof UsersState; value: any }>
+    setUser: <K extends keyof UsersState>(
+      state: UsersState,
+      action: PayloadAction<{ key: K; value: UsersState[K] }>
     ) => {
-      (state as any)[action.payload.key] = action.payload.value;
+      state[action.payload.key] = action.payload.value;
     },
     clearUser: (state) => {
       state.user = defaultUser;

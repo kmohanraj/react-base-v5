@@ -1,14 +1,22 @@
-import { Provider } from "react-redux";
 import AppRoutes from "./routes/AppRoutes";
+import Header from "./components/Headers";
+import Footer from "./components/Footer";
+import { Provider } from "react-redux";
 import { store } from "./store";
-import "./App.css";
+import "../src/assets/styles/layout.scss";
 
-function App() {
+const App = () => {
   return (
-    <Provider store={store}>
-      <AppRoutes />
-    </Provider>
+    <div className="page-wrapper">
+      <Header />
+      <main className="main-content">
+        <Provider store={store}>
+          <AppRoutes />
+        </Provider>
+      </main>
+      <Footer />
+    </div>
   );
-}
+};
 
 export default App;

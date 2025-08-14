@@ -1,0 +1,39 @@
+@use './__variables' as var;
+
+.cards {
+  display: flex;
+  gap: 30px;
+  padding: 14px 0;
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    border: 1px solid var.$border;
+    background: var.$white;
+    padding: 6px 10px;
+    border-radius: 4px;
+
+    &--icon {
+      padding: 20.5px 10px;
+    }
+
+    &--content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      padding: 17px 0;
+
+      h3 {
+        font-size: 1.25rem;
+        font-family: var.$font-bold;
+      }
+      p {
+        font-size: .9375rem;
+        color: var.$text-secondary;
+      }
+    }
+  }
+}
