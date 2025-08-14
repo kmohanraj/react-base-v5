@@ -1,0 +1,62 @@
+@use 'sass:map';
+@import url("https://cdn.fonts.net/kit/62ee8ca4-c29c-43ec-9465-04b0232e8c19/62ee8ca4-c29c-43ec-9465-04b0232e8c19.css");
+
+// Fonts
+$font-light: var(--font-light, "HelveticaNowTextLight");
+$font-regular: var(--font-regular, "HelveticaNowTextRegular");
+$font-medium: var(--font-medium, "HelveticaNowTextMedium");
+$font-bold: var(--font-bold, "HelveticaNowTextBold");
+
+// Variables
+$primary: #28A9C3;
+$secondary: #D6EBEF;
+$neutral: #E8F0F2;
+$hover: #308090;
+$white: #FFFFFF;
+$bg: #EFF7F9;
+$text-primary: #000000;
+$text-secondary: #666666;
+$link: #4259E0;
+$success: #5DBC4A;
+$warning: #E09E42;
+$error: #E22C1C;
+$btn-primary: #28A9C3;
+$btn-disable: #CCCCCC;
+$border: #CCCCCC;
+
+// Mode 2
+// $primary: #4259E0;
+// $secondary: #CFD4F1;
+// $neutral: #FFFFFF;
+// $hover: #3E4DA3;
+// $white: #FFFFFF;
+// $bg: #F2F2F2;
+// $ext-primary: #000000;
+// $text-secondary: #666666;
+// $link: #4259E0;
+// $success: #5DBC4A;
+// $warning: #E09E42;
+// $error: #E22C1C;
+// $btn-primary: #4259E0;
+// $btn-disable: #CCCCCC;
+// $border: #CCCCCC;
+
+// Breakpoints for responsive
+$breakpoints: (
+  xs: 480px,
+  sm: 768px,
+  md: 1024px,
+  lg: 1280px,
+  xl: 1440px,
+  xxl: 1920px
+);
+// @mixin breakpoint($breakpoint) {
+//   @media (max-width: map-get($breakpoints, $breakpoint)) {
+//     @content;
+//   }
+// }
+@mixin breakpoint($breakpoint) {
+  @media (min-width: map.get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}

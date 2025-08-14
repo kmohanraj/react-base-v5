@@ -1,8 +1,7 @@
 import type { ReactNode, FC } from "react";
 import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
-import type { RootState } from "../store"; // adjust the import path as needed
- // adjust the import path as needed
+import type { RootState } from "../store";
 
 type TProtectedLayoutProps = {
   children: ReactNode;

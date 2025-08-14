@@ -1,0 +1,74 @@
+@use './__variables' as var;
+// @use './__breakpoint' as *;
+
+.site-header {
+  background-color: var.$primary;
+  color: white;
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @include var.breakpoint(md) {
+    flex-direction: row;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    color: var.$white;
+  }
+
+  .menu-toggle {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var.$text-primary;
+    cursor: pointer;
+    user-select: none;
+
+    // Hide toggle on desktop and above
+    @include var.breakpoint(md) {
+      display: none;
+      transition: all 0.3s ease;
+    }
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    margin-top: 1rem;
+    a {
+      color: var.$white;
+      text-decoration: none;
+      // padding: 0.5rem 0;
+      &:hover {
+        text-decoration: none;
+        color: var.$white;
+      }
+    }
+
+    &.open {
+      display: flex;
+      a {
+        padding: 0.5rem 0;
+      }
+    }
+    // Desktop layout
+    @include var.breakpoint(md) {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      margin-top: 0;
+      gap: 1rem;
+    }
+  }
+}

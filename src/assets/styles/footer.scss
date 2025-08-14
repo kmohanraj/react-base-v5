@@ -1,0 +1,17 @@
+@use './__variables' as var;
+// @use './__fonts' as fonts;
+
+// .site-footer {
+//   background-color: $primary-color;
+//   color: white;
+//   text-align: center;
+//   padding: .625rem;
+// }
+
+.site-footer {
+  background-color: var.$primary;
+  color: white;
+  text-align: center;
+  // border-top: 1px solid color.adjust(variables.$primary-color, $lightness: 10%);;
+  font-family: var.$font-regular;
+}
