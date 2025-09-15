@@ -32,7 +32,7 @@ const Branches = () => {
   ];
 
   return (
-    <>
+    <div className="branch-content">
       <TopPanel
         title="Branches"
         btnLabel="Add Branch"
@@ -62,7 +62,7 @@ const Branches = () => {
           children={<AddBranch setIsAddBranch={setIsAddBranch} />}
         />
       </div>
-    </>
+    </div>
   );
 };
 
