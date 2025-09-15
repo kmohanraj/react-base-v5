@@ -5,11 +5,12 @@ import TopPanel from "../components/TopPanel";
 import AddCustomer from "../components/AddCustomer";
 import closeIcon from "../assets/icons/close.svg";
 import addIcon from "../assets/icons/add.svg";
+import '../assets/styles/customers.scss';
 
 const Customers = () => {
   const [isAddCustomer, setIsAddCustomer] = useState(false);
-  const device = useGetDevice()
-  const navigate  = useNavigate()
+  const device = useGetDevice();
+  const navigate = useNavigate();
   const columns = [
     { key: "id", label: "ID" },
     { key: "name", label: "Name" },
@@ -134,7 +135,7 @@ const Customers = () => {
     },
   ];
   return (
-    <>
+    <div className="customer-content">
       <TopPanel
         title="Customers"
         btnLabel="Add Customer"
@@ -145,16 +146,16 @@ const Customers = () => {
         columns={columns as never}
         data={data}
         onAction={(data) => {
-          navigate(`/collection?customer_id=${data.id}`)
-          console.log("--onAction", { data })
-        } }
+          navigate(`/collection?customer_id=${data.id}`);
+          console.log("--onAction", { data });
+        }}
         onDelete={(data) => console.log("--onDelete", { data })}
         onEdit={(data) => console.log("--onEdit", { data })}
         isAction
         isSorting
         isOuterBorderLess
         isPagination
-        paginationPlacement={device === "mobile" ? 'center' : 'right'}
+        paginationPlacement={device === "mobile" ? "center" : "right"}
         isMoreBtn
       />
       <div className="add-branch">
@@ -169,7 +170,7 @@ const Customers = () => {
           isStickyHeader
         />
       </div>
-    </>
+    </div>
   );
 };
 

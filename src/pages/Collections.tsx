@@ -12,7 +12,7 @@ const Collections = () => {
   const columns = [
     { key: "id", label: "ID" },
     { key: "amount", label: "Paid amount" },
-    { key: "dues_to_pay", label: "No of dues to pay" },
+    { key: "dues_to_pay", label: "Dues to pay" },
     { key: "next_bill_cycle", label: "Next bill cycle" },
     { key: "status", label: "Status" },
     { key: "note", label: "Note" },
