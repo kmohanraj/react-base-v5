@@ -1,9 +1,11 @@
 @use './__variables' as var;
 
 .cards {
-  display: flex;
+  display: grid;
   gap: 30px;
   padding: 14px 0;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
 
   .card {
     display: flex;
