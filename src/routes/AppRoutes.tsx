@@ -8,6 +8,7 @@ import Dashboard from "../pages/Dashboard";
 import Customers from "../pages/Customers";
 import Users from "../pages/Users";
 import Branches from "../pages/Branches";
+import Collections from "../pages/Collections";
 
 // const { ROLES } = CONSTANTS;
 
@@ -39,6 +40,7 @@ const AppRoutes = () => {
     },
     { path: "/", element: <Dashboard /> },
     { path: "*", element: <NotFound /> },
+    { path: '/collection', element: <Collections/>}
   ];
 
   return (
